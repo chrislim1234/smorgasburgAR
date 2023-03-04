@@ -17,17 +17,21 @@
         .then(response => response.json())
         .then(data => {
           const entitiesContainer = document.getElementById('entities-container');
-
+          console.log("wow working");
           // Loop through the data and create an a-entity for each row
           data.forEach(rowData => {
-            const { latitude, longitude } = rowData;
+            const {Location,Address,Latitude,longitude} = rowData;
             const entity = document.createElement('a-entity');
             entity.setAttribute('material', 'color: red');
             entity.setAttribute('geometry', 'primitive: box');
-            entity.setAttribute('gps-new-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+            entity.setAttribute('gps-new-entity-place', `latitude: ${Latitude}; longitude: ${longitude}`);
+            entity.setAttribute('position', '0 0 0');
             entity.setAttribute('scale', '10 10 10');
-            console.log($[{latitude})
-            console.log($[{longitude})
+            console.log(Location);
+            console.log(Address);
+            console.log(Latitude);
+            console.log(Longitude);
+            // console.log(entitiesContainer)
             entitiesContainer.appendChild(entity);
           });
         })

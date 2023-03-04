@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excel to HTML Table</title>
+  </head>
+  <body>
+    <table id="excelTable"></table>
+    <script>
+      fetch('table.json?' + new Date().getTime())
+  .then(response => response.json())
+  .then(data => {
+    // Get a reference to the table element
+    const table = document.getElementById('excelTable');
+
+    // Add the table headers
+    const headers = Object.keys(data[0]);
+    const headerRow = table.insertRow();
+    headers.forEach(header => {
+      const th = document.createElement('th');
+      th.textContent = header;
+      headerRow.appendChild(th);
+    });
+
+    // Add the table rows
+    data.forEach(rowData => {
+      const row = table.insertRow();
+      headers.forEach(header => {
+        const cell = row.insertCell();
+        cell.textContent = rowData[header];
+      });
+    });
+  })
+  .catch(error => console.error(error));
+
+    </script>
+  </body>
+</html>

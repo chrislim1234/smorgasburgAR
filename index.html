@@ -9,7 +9,7 @@
         <script>
             const latArray = [34.02055611]
             const longArray = [-118.303161]
-            const idArray = ["#text1"]
+            const idArray = ["#text11"]
             // const imgArray ["assets/asset.jpeg"]
             const locNameArray = ["Chris's House"]
             function getDistance(lat1, lon1, lat2, lon2) {
@@ -61,66 +61,167 @@
             <a-scene embedded loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false;"
             >
+                <!-- Location 1 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_info-01.png"
                     look-at="[gps-camera]"
-                    scale="1 1 1"
+                    scale="10 10 10"
                     gps-entity-place="latitude: 34.0346104; longitude: -118.2416855;"
                 ></a-image>
+                <a-text
+                    id = "text1"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.0346104; longitude: -118.303161;"
+                ></a-text>
+                <!-- Location 2 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_coffee-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.034942; longitude: -118.241651;"
                 ></a-image>
+                <a-text
+                    id = "text2"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.034942; longitude: -118.241651;"
+                ></a-text>
+                <!-- Location 3 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_lobster-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.035375; longitude: -118.241322;"
                 ></a-image>
+                <a-text
+                    id = "text3"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.035375; longitude: -118.241322;"
+                ></a-text>
+                <!-- Location 4 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_beer-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.03563; longitude: -118.2414;"
                 ></a-image>
+                <a-text
+                    id = "text4"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.03563; longitude: -118.2414;"
+                ></a-text>
+                <!-- Location 5 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_popsicle-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.035394; longitude: -118.241746;"
                 ></a-image>
+                <a-text
+                    id = "text5"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.035394; longitude: -118.241746;"
+                ></a-text>
+                <!-- Location 6 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_shoppingbag-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.03527; longitude: -118.241627;"
                 ></a-image>
+                <a-text
+                    id = "text6"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.03527; longitude: -118.241627;"
+                ></a-text>
+                <!-- Location 7 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_vegan-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.034983; longitude: -118.241988;"
                 ></a-image>
+                <a-text
+                    id = "text7"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.034983; longitude: -118.241988;"
+                ></a-text>
+                <!-- Location 8 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_taco-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.034826; longitude: -118.241955;"
                 ></a-image>
+                <a-text
+                    id = "text8"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.034826; longitude: -118.241955;"
+                ></a-text>
+                <!-- Location 9 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_restroom-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.034561; longitude: -118.242386;"
                 ></a-image>
+                <a-text
+                    id = "text9"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.034561; longitude: -118.242386;"
+                ></a-text>
+                <!-- Location 10 -->
                 <a-image
-                    src="assets/asset.jpeg"
+                    src="assets/icon_shoppingbag-01.png"
                     look-at="[gps-camera]"
                     scale="1 1 1"
                     gps-entity-place="latitude: 34.034462; longitude: -118.241899;"
                 ></a-image>
+                <a-text
+                    id = "text10"
+                    value="Distance: 100m"
+                    position="15 0 0"
+                    color = "black"
+                    scale = "2 2 2"
+                    look-at="[gps-camera]"
+                    gps-entity-place="latitude: 34.034462; longitude: -118.241899;"
+                ></a-text>
+                <!-- chris's house -->
                 <a-image
                     src="assets/asset.jpeg"
                     position="0 0 0 "
@@ -129,7 +230,7 @@
                     gps-entity-place="latitude: 34.02055611; longitude: -118.303161;"
                 ></a-image>
                 <a-text
-                    id = "text1"
+                    id = "text11"
                     value="Distance: 100m"
                     position="15 0 0"
                     color = "black"

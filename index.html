@@ -6,6 +6,9 @@
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Nunito+Sans:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
         <script>
             const latArray = [34.0346104,34.034942,34.035375,34.03563,34.035394,34.03527,34.034983,34.034826,34.034561,34.034462,34.02055611]
             const longArray = [-118.2416855,-118.241651,-118.241322,-118.2414,-118.241746,-118.241627,-118.241988,-118.241955,-118.242386,-118.241899,-118.303161]
@@ -55,8 +58,8 @@
     </head>
 
    <body style="margin: 0; overflow: hidden;">
-        <div style="height: 100px; background: white; border: 5px solid;margin: auto; width: 50%; padding: 10px;">
-            <h3 style="text-align: center;">Smorgasburg VR Experience</h3>
+        <div style="height: 50px; background: #4051c6; border: none;margin: auto; width: 50%; padding: 10px;">
+            <h3 style="text-align: center;" size="30px" color="#f4e3d0" font-family="Nunito+Sans">Smorgasburg VR Experience</h3>
         </div>
         <div id="myEmbeddedScene" style="height: 60vh">
             <!-- loading-screen="dotsColor: red; backgroundColor: black" -->
@@ -74,7 +77,7 @@
                     id = "text1"
                     value="Distance: 100m"
                     position="15 0 0"
-                    color = "black"
+                    color = "#f4e3d0"
                     scale = "5 5 5"
                     look-at="[gps-camera]"
                     gps-entity-place="latitude: 34.0346104; longitude: -118.303161;"
@@ -90,7 +93,7 @@
                     id = "text2"
                     value="Distance: 100m"
                     position="15 0 0"
-                    color = "black"
+                    color = "#f4e3d0"
                     scale = "5 5 5"
                     look-at="[gps-camera]"
                     gps-entity-place="latitude: 34.034942; longitude: -118.241651;"

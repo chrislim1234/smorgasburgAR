@@ -43,7 +43,7 @@
 
                     distance = getDistance(latitude,longitude,lat,long)*1000
                     console.log(distance)
-                    document.querySelector(idArray[i]).setAttribute("value", `${locNameArray[0]} Distance: ${distance.toFixed(2)}m`);
+                    document.querySelector(idArray[i]).setAttribute("value", `${locNameArray[i]} Distance: ${distance.toFixed(2)}m`);
                   });
                 } else {
                   console.log("Geolocation is not supported by this browser.");

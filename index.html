@@ -46,7 +46,7 @@
 
                     distance = getDistance(latitude,longitude,lat,long)*1000
                     console.log(distance)
-                    document.querySelector(idArray[i]).setAttribute("value", `${locNameArray[i]} Distance: ${distance.toFixed(2)}m`);
+                    document.querySelector(idArray[i]).setAttribute("value", `${locNameArray[i]} \nDistance: ${distance.toFixed(2)}m`);
                   });
                 } else {
                   console.log("Geolocation is not supported by this browser.");
@@ -76,7 +76,7 @@
                 <a-text
                     id = "text1"
                     value="Distance: 100m"
-                    position="15 0 0"
+                    position="0 -1 0"
                     color = "#f4e3d0"
                     scale = "5 5 5"
                     look-at="[gps-camera]"
@@ -92,7 +92,7 @@
                 <a-text
                     id = "text2"
                     value="Distance: 100m"
-                    position="15 0 0"
+                    position="15 -1 0"
                     color = "#f4e3d0"
                     scale = "5 5 5"
                     look-at="[gps-camera]"
@@ -108,7 +108,7 @@
                 <a-text
                     id = "text3"
                     value="Distance: 100m"
-                    position="15 0 0"
+                    position="15 1 0"
                     color = "black"
                     scale = "5 5 5"
                     look-at="[gps-camera]"

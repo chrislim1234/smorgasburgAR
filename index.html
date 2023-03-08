@@ -67,21 +67,24 @@
             arjs="sourceType: webcam; debugUIEnabled: false;"
             >
                 <!-- Location 1 -->
+                <a-entity position="-5 0 0">
                 <a-image
                     src="assets/icon_info-01.png"
                     look-at="[gps-camera]"
                     scale="5 5 5"
                     gps-entity-place="latitude: 34.0346104; longitude: -118.2416855;"
                 ></a-image>
+                </a-entity>
+                <a-entity position="5 0 0">
                 <a-text
                     id = "text1"
                     value="Distance: 100m"
-                    position="20 0 0"
                     color = "#f4e3d0"
                     scale = "5 5 5"
                     look-at="[gps-camera]"
                     gps-entity-place="latitude: 34.0346104; longitude: -118.2416855;"
                 ></a-text>
+                </a-entity>
                 <!-- Location 2 -->
                 <a-image
                     position="-10 0 0"

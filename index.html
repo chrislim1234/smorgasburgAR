@@ -10,11 +10,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Nunito+Sans:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
         <script>
-            const latArray = [34.02055611]
-            const longArray = [-118.303161]
-            const idArray = ["#text11"]
+            const latArray = [34.0346104,34.034942,34.035375,34.03563,34.035394,34.03527,34.034983,34.034826,34.034561,34.034462,34.02055611]
+            const longArray = [-118.2416855,-118.241651,-118.241322,-118.2414,-118.241746,-118.241627,-118.241988,-118.241955,-118.242386,-118.241899,-118.303161]
+            const idArray = ["#text1","#text2","#text3","#text4","#text5","#text6","#text7","#text8","#text9","#text10","#text11"]
             // const imgArray ["assets/asset.jpeg"]
-            const locNameArray = ["Chris's House"]
+            const locNameArray = ["Info Booth","Drinks","Seafood","Beer Garden","Dessert","Shopping","Vegan","Tacos","Restrooms","Shopping","Chris's House"]
             function getDistance(lat1, lon1, lat2, lon2) {
               const R = 6371; // Radius of the earth in km
               const dLat = deg2rad(lat2 - lat1); // deg2rad below
@@ -33,25 +33,27 @@
               return deg * (Math.PI/180)
             }
           function updateDistance() {
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(function(position) {
-                var latitude = position.coords.latitude;
-                var longitude = position.coords.longitude;
-                console.log("Latitude: " + latitude + ", Longitude: " + longitude);
-                lat = latArray[0]
-                long = longArray[0]
-                console.log(lat); // Output: "34.02055611"
-                console.log(long); // Output: "-118.303161"
+            for (let i = 0; i < latArray.length; i++) {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(function(position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+                    console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+                    lat = latArray[i]
+                    long = longArray[i]
+                    console.log(lat); // Output: "34.02055611"
+                    console.log(long); // Output: "-118.303161"
 
-                distance = getDistance(latitude,longitude,lat,long)*1000
-                console.log(distance)
-                document.querySelector(idArray[0]).setAttribute("value", `${locNameArray[0]} Distance: ${distance.toFixed(2)}m`);
-              });
-            } else {
-              console.log("Geolocation is not supported by this browser.");
+                    distance = getDistance(latitude,longitude,lat,long)*1000
+                    console.log(distance)
+                    document.querySelector(idArray[i]).setAttribute("value", `${locNameArray[i]} Distance: ${distance.toFixed(2)}m`);
+                  });
+                } else {
+                  console.log("Geolocation is not supported by this browser.");
+                }
             }
           }
-          setInterval(updateDistance, 1000);
+          setInterval(updateDistance, 100);
         </script>
     </head>
 
